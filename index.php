@@ -17,8 +17,8 @@
 <body>
 
     <div class="contenedor-formulario contenedor">
-        <div class="imagen-formulario">
-            <img class="imagen-bacground" src="assets/background.png" alt="" style="width: 700px;">
+        <div class="imagen-formulario"> <!-- aqui va la imagen de la empresa-->
+            <img class="imagen-bacground" src="#" alt="" style="width: 700px;">
         </div>
 
         <form class="formulario" action="main.php" method="post" name="confir">
