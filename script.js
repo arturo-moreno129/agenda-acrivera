@@ -43,14 +43,17 @@ document.addEventListener("DOMContentLoaded", function () {
     dayMaxEvents: true, // allow "more" link when too many events
     events: [
       {
-        title: "All Day Event",
-        start: "2024-01-01",
+        title: 'MANTENIEMIETNO',
+        start: '2024-09-09T11:00:00',
+        end: '2024-09-09T11:30:00',
+        color: "#FF0000"
       },
-      /*{
-        title: "Long Event",
-        start: "2023-01-07",
-        end: "2023-01-10",
-      },
+      {
+        title: 'Meeting',
+        start: '2024-09-13T11:00:00',
+        //constraint: 'availableForMeeting', // defined below
+        color: '#FF0000'
+      },/*
       {
         groupId: 999,
         title: "Evento Repetido 2",

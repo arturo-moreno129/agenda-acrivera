@@ -28,11 +28,11 @@
             </div>
             <div class="input">
                 <label for="usuario">Usuario</label>
-                <input placeholder="Ingresa tu nombre" type="text" id="usuario">
+                <input placeholder="Ingresa tu nombre" type="text" id="usuario" name ="user">
             </div>
             <div class="input">
                 <label for="contraseña">Contraseña</label>
-                <input placeholder="Ingresa tu contraseña" type="password" id="contraseña">
+                <input placeholder="Ingresa tu contraseña" type="password" id="contraseña" name = "password">
             </div>
             <div class="password-olvidada">
                 <a href="#">¿Olvidaste tu contraseña?</a>
