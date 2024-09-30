@@ -32,12 +32,10 @@
       calendar.unselect();
     },
     eventClick: function (arg) {
-      if (confirm("¿Está seguro de borrar el evento?")) {
-        var claveUser = "1299790";
-        var comparation = prompt("Ingrese la contraseña");
-        if(claveUser == comparation){
-          arg.event.remove();
-        }
+      if(arg.event.groupId == 1){
+        alert("No puedes eliminar este elemento");
+      }else{
+        arg.event.remove()
       }
     },
     editable: true,
@@ -49,10 +47,12 @@
         if($result){
           while($row=mysqli_fetch_array($result)) {
             echo "{
+              id:'". $row['estatus'] ."',
               title: '". $row['titulo'] ."',
               start: '". $row['inicio'] ."',
               end: '". $row['fin'] ."',
-              color: '". ($row['estatus'] == 1 ? '#FF0000' : '#00FF00') ."'
+              color: '". ($row['estatus'] == 1 ? '#FF0000' : '#00FF00') ."',
+              groupId	: '". $row['estatus'] ."',
             },";
           }
         }  
