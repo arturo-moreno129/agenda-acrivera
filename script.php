@@ -1,5 +1,6 @@
-
-document.addEventListener("DOMContentLoaded", function () {
+<?php include("conexion.php")?>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
   var calendarEl = document.getElementById("calendar");
 
   var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -42,18 +43,32 @@ document.addEventListener("DOMContentLoaded", function () {
     editable: true,
     dayMaxEvents: true, // allow "more" link when too many events
     events: [
-      {
-        title: 'MANTENIEMIETNO',
+      <?php 
+        $query="SELECT * FROM eventos";
+        $result=mysqli_query($con,$query);
+        if($result){
+          while($row=mysqli_fetch_array($result)) {
+            echo "{
+              title: '". $row['titulo'] ."',
+              start: '". $row['inicio'] ."',
+              end: '". $row['fin'] ."',
+              color: '". ($row['estatus'] == 1 ? '#FF0000' : '#00FF00') ."'
+            },";
+          }
+        }  
+      ?>
+      /*{
+        title: "man",
         start: '2024-09-09T11:00:00',
         end: '2024-09-09T11:30:00',
-        color: "#FF0000"
+        color: 
       },
       {
         title: 'Meeting',
         start: '2024-09-13T11:00:00',
         //constraint: 'availableForMeeting', // defined below
         color: '#FF0000'
-      },/*
+      },
       {
         groupId: 999,
         title: "Evento Repetido 2",
@@ -104,3 +119,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   calendar.render();
 });
+
+</script>

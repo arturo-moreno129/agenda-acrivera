@@ -1,3 +1,4 @@
+<?php include("script.php")?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,7 +11,9 @@
   <link rel="shortcut icon" href="assets/icono_FM.jpg" type="image/x-icon">
 </head>
 <body>
+  
    <!--CONTENEDOR DEL CALENDARIO-->
   <div id='calendar'></div>
+  
  </body>
 </html>

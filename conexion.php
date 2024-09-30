@@ -1,6 +1,6 @@
 <?php
     $dbHost='127.0.0.1';
-    $dbName='acrivera';
+    $dbName='bd_acrivera';
     $dbUser='root';
     $dbPass="";
     $con=mysqli_connect($dbHost,$dbUser,$dbPass,$dbName);
